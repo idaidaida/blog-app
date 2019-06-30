@@ -1,0 +1,7 @@
+.container
+    %h3.mb-3 エントリーがないブログ一覧
+    .list-group.mb-3
+        - @not_have_entry_blogs.each do |blog|
+            .list-group-item
+                #{blog.title}
+    = link_to "戻る", root_path, class:"btn btn-default"

@@ -1,0 +1,17 @@
+.container
+    .card
+        .card-header
+            ブログタイトル
+        .card-body
+            #{@blog.title}
+    .card.mt-3
+        .card-header
+            コメント
+        - @blog.entries.each do |entry|
+            - entry.comments.each do |comment|
+                .list-group.list-group-flush
+                    .list-group-item
+                        #{comment.body}
+    .mt-3
+    = link_to "戻る", root_path,class:"btn btn-default"
+

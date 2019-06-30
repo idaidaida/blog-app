@@ -1,0 +1,20 @@
+.container
+    .row
+        .col-4            
+            .card
+                .card-body.text-center.py-5
+                    %p.py-2
+                        IDが1のブログに紐づくコメントを表示する
+                    = link_to "Go!!", blog_path(1), {class:"btn btn-info btn-block"}
+        .col-4            
+            .card
+                .card-body.text-center.py-5
+                    %p.py-2
+                        Entryを書いていないBlogを表示する
+                    = link_to "Go!!", not_have_entry_blogs_path,class:"btn btn-warning btn-block text-white"
+        .col-4            
+            .card
+                .card-body.text-center.py-5
+                    %p.py-2
+                        statusがunapprovedであるBlogを表示する
+                    = link_to "Go!!", have_unapproved_comment_blogs_path,class:"btn btn-success btn-block"
